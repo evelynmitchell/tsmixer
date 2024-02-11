@@ -27,12 +27,12 @@ python = "^3.10"
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.1.6"
-flake8
-pytest
-pylint
-black
-torchfix
-deptry
+flake8 = "*"
+pytest = "*"
+pylint = "*"
+black = "*"
+torchfix = "*"
+deptry = "*"
 
 
 [tool.poetry.group.lint.dependencies]
