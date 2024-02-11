@@ -17,7 +17,7 @@ class TestCodeUnderTest:
 
         # Act
         with patch.object(server, 'run') as mock_run:
-            code_under_test.main()
+            tsmixer.main()
 
         # Assert
         mock_run.assert_called_once_with(port=None)
@@ -35,7 +35,7 @@ class TestCodeUnderTest:
 
         # Act
         with patch.object(config, 'load') as mock_load:
-            code_under_test.main()
+            tsmixer.main()
 
         # Assert
         mock_load.assert_called_once_with('config.json')
@@ -55,7 +55,7 @@ class TestCodeUnderTest:
         with patch.object(utils, 'load_data') as mock_load_data, \
              patch.object(utils, 'load_model') as mock_load_model, \
              patch.object(utils, 'save_forecast') as mock_save_forecast:
-            code_under_test.main()
+            tsmixer.main()
 
         # Assert
         mock_load_data.assert_called_once_with('data.csv')
@@ -73,7 +73,7 @@ class TestCodeUnderTest:
 
         # Act
         with pytest.raises(SystemExit):
-            code_under_test.main()
+            tsmixer.main()
 
     # 
     def test_handle_invalid_arguments_gracefully(self):
@@ -86,7 +86,7 @@ class TestCodeUnderTest:
 
         # Act
         with pytest.raises(SystemExit):
-            code_under_test.main()
+            tsmixer.main()
 
     # 
     def test_handle_missing_configuration_file_gracefully(self):
@@ -99,4 +99,4 @@ class TestCodeUnderTest:
 
         # Act
         with pytest.raises(SystemExit):
-            code_under_test.main()
+            tsmixer.main()

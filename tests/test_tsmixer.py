@@ -3,10 +3,11 @@
 
 import pytest
 
-class TestCodeUnderTest:
+class TestTSMixer:
 
-    # The forward method of the MixerLayer class can be tested by passing in a tensor of shape (batch_size, num_features, num_time_steps, channels) and checking if the output tensor has the same shape.
+    # 
     def test_forward_method_of_MixerLayer_with_valid_input(self):
+        """ The forward method of the MixerLayer class can be tested by passing in a tensor of shape (batch_size, num_features, num_time_steps, channels) and checking if the output tensor has the same shape."""
         # Create input tensor
         batch_size = 2
         num_features = 3
@@ -23,8 +24,9 @@ class TestCodeUnderTest:
         # Check if output tensor has the same shape as input tensor
         assert output_tensor.shape == input_tensor.shape
 
-    # The forward method of the TemporalProjection class can be tested by passing in a tensor of shape (batch_size, num_features, num_time_steps, channels) and checking if the output tensor has the same shape.
+    # 
     def test_forward_method_of_TemporalProjection_with_valid_input(self):
+        """ The forward method of the TemporalProjection class can be tested by passing in a tensor of shape (batch_size, num_features, num_time_steps, channels) and checking if the output tensor has the same shape."""
         # Create input tensor
         batch_size = 2
         num_features = 3
@@ -41,8 +43,9 @@ class TestCodeUnderTest:
         # Check if output tensor has the same shape as input tensor
         assert output_tensor.shape == input_tensor.shape
 
-    # The forward method of the TSMixer class can be tested by passing in a tensor of shape (batch_size, num_features, num_time_steps, channels) and checking if the output tensor has the same shape.
+    # 
     def test_forward_method_of_TSMixer_with_valid_input(self):
+        """The forward method of the TSMixer class can be tested by passing in a tensor of shape (batch_size, num_features, num_time_steps, channels) and checking if the output tensor has the same shape."""
         # Create input tensor
         batch_size = 2
         num_features = 3
@@ -59,8 +62,9 @@ class TestCodeUnderTest:
         # Check if output tensor has the same shape as input tensor
         assert output_tensor.shape == input_tensor.shape
 
-    # The forward method of the MixerLayer class can be tested by passing in an empty tensor and checking if it raises an exception.
+    # 
     def test_forward_method_of_MixerLayer_with_empty_input(self):
+        """The forward method of the MixerLayer class can be tested by passing in an empty tensor and checking if it raises an exception."""
         # Create empty input tensor
         input_tensor = torch.empty(0)
 
@@ -71,8 +75,9 @@ class TestCodeUnderTest:
         with pytest.raises(Exception):
             mixer_layer.forward(input_tensor)
 
-    # The forward method of the TemporalProjection class can be tested by passing in an empty tensor and checking if it raises an exception.
+    # 
     def test_forward_method_of_TemporalProjection_with_empty_input(self):
+        """ The forward method of the TemporalProjection class can be tested by passing in an empty tensor and checking if it raises an exception."""
         # Create empty input tensor
         input_tensor = torch.empty(0)
 
@@ -83,8 +88,9 @@ class TestCodeUnderTest:
         with pytest.raises(Exception):
             temporal_projection.forward(input_tensor)
 
-    # The forward method of the TSMixer class can be tested by passing in an empty tensor and checking if it raises an exception.
+    # 
     def test_forward_method_of_TSMixer_with_empty_input(self):
+        """ The forward method of the TSMixer class can be tested by passing in an empty tensor and checking if it raises an exception."""
         # Create empty input tensor
         input_tensor = torch.empty(0)
 
@@ -95,8 +101,9 @@ class TestCodeUnderTest:
         with pytest.raises(Exception):
             ts_mixer.forward(input_tensor)
 
-    # The MLP class can be tested by passing in a tensor of shape (batch_size, input_dim) and checking if the output tensor has the same shape.
+    # 
     def test_MLP_with_valid_input(self):
+        """ The MLP class can be tested by passing in a tensor of shape (batch_size, input_dim) and checking if the output tensor has the same shape."""
         # Create input tensor
         batch_size = 2
         input_dim = 3
@@ -111,8 +118,9 @@ class TestCodeUnderTest:
         # Check if output tensor has the same shape as input tensor
         assert output_tensor.shape == input_tensor.shape
 
-    # The MLP class can be tested by passing in an empty tensor and checking if it raises an exception.
+    # 
     def test_MLP_with_empty_input(self):
+        """ The MLP class can be tested by passing in an empty tensor and checking if it raises an exception."""
         # Create empty input tensor
         input_tensor = torch.empty(0)
 
@@ -123,8 +131,9 @@ class TestCodeUnderTest:
         with pytest.raises(Exception):
             mlp.forward(input_tensor)
 
-    # The forward method of the MixerLayer class can be tested by passing in a tensor with NaN values and checking if the output tensor also has NaN values.
+    # 
     def test_forward_method_of_MixerLayer_with_NaN_input(self):
+        """ The forward method of the MixerLayer class can be tested by passing in a tensor with NaN values and checking if the output tensor also has NaN values."""
         # Create input tensor with NaN values
         input_tensor = torch.tensor([[1.0, float('nan')], [3.0, 4.0]])
 
@@ -137,8 +146,9 @@ class TestCodeUnderTest:
         # Check if output tensor also has NaN values
         assert torch.isnan(output_tensor).any()
 
-    # The forward method of the TemporalProjection class can be tested by passing in a tensor with NaN values and checking if the output tensor also has NaN values.
+    # 
     def test_forward_method_of_TemporalProjection_with_NaN_input(self):
+        """ The forward method of the TemporalProjection class can be tested by passing in a tensor with NaN values and checking if the output tensor also has NaN values."""
         # Create input tensor with NaN values
         input_tensor = torch.tensor([[float('nan'), 1.0], [2.0, 3.0]])
 
@@ -151,8 +161,9 @@ class TestCodeUnderTest:
         # Check if output tensor also has NaN values
         assert torch.isnan(output_tensor).all()
 
-    # The forward method of the TSMixer class can be tested by passing in a tensor with NaN values and checking if the output tensor also has NaN values.
+    # 
     def test_forward_method_of_TSMixer_with_NaN_input(self):
+        """ The forward method of the TSMixer class can be tested by passing in a tensor with NaN values and checking if the output tensor also has NaN values."""
         # Create input tensor with NaN values
         input_tensor = torch.tensor([[1.0, float('nan')], [2.0, 3.0]])
 
