@@ -20,6 +20,13 @@ jobs:
 
       - name: Install dependencies
         run: pip install --no-cache-dir -r requirements.txt
+      
+      - name: Run black
+        run: black
 
-      - name: Run linters
+      - name: Run pylint
         run: pylint 
+      
+      - name: Run flake8
+        run: flake8
+

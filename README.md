@@ -1,7 +1,18 @@
+# TSMixer Multivariate Time Series Forecasting
 
+https://arxiv.org/pdf/2303.06053.pdf
 
-# Python Package Template
-A easy, reliable, fluid template for python packages complete with docs, testing suites, readme's, github workflows, linting and much much more
+This model used two MLP layers, one for time and one for features, which are combined using fully connected layers to create forecasts for all features.
+
+The paper tested this model on electricity, traffic, weather as well as retail data. It outperformed all multivariate models, and was as good as univariate models on univariate data.
+
+The model is implemented in PyTorch, and is available in the `tsmixer` package.
+
+The input to the model are matrices where the rows are time steps and the columns are features. There is an extended version of the model where known upcoming events can be included in the forecast.
+
+## Model
+
+[tsmixer](TSMixer.png)
 
 
 ## Installation
@@ -18,8 +29,6 @@ print("hello world")
 
 ```
 
-
-
 ### Code Quality 🧹
 
 We provide two handy commands inside the `Makefile`, namely:
@@ -28,10 +37,11 @@ We provide two handy commands inside the `Makefile`, namely:
 - `make check_code_quality` to check code quality (PEP8 basically)
 - `black .`
 - `ruff . --fix`
+- 'flake8 .' which includes torchfix
 
 ### Tests 🧪
 
-[`pytests`](https://docs.pytest.org/en/7.1.x/) is used to run our tests.
+[`pytest`](https://docs.pytest.org/en/7.1.x/) is used to run our tests.
 
 ### Publish on PyPi 🚀
 

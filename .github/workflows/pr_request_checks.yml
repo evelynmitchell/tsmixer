@@ -23,5 +23,6 @@ jobs:
 
       - name: Run tests and checks
         run: |
+          ruff
           pytest tests/
           pylint 
