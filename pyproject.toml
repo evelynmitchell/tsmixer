@@ -5,14 +5,14 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry]
 name = "paper"
 version = "0.0.1"
-description = "Paper - Pytorch"
+description = "TSMixer - Pytorch"
 license = "MIT"
 authors = ["Evelyn Mitchell <efmphone@gmail.com"]
-homepage = "https://github.com/evelynmmitchell/paper"
-documentation = "https://github.com/evelynmitchell/paper"  # Add this if you have documentation.
-readme = "README.md"  # Assuming you have a README.md
-repository = "https://github.com/evelynmitchell/paper"
-keywords = ["artificial intelligence", "deep learning", "optimizers", "Prompt Engineering"]
+homepage = "https://github.com/evelynmmitchell/tsmixer"
+documentation = "https://github.com/evelynmitchell/tsmixer"  # Add this if you have documentation.
+readme = "README.md"  
+repository = "https://github.com/evelynmitchell/tsmixer"
+keywords = ["time series", "multivariate", "forecasting","artificial intelligence", "deep learning", "optimizers", "Prompt Engineering"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -26,7 +26,13 @@ python = "^3.10"
 
 
 [tool.poetry.dev-dependencies]
-# Add development dependencies here
+ruff = "^0.1.6"
+flake8
+pytest
+pylint
+black
+torchfix
+deptry
 
 
 [tool.poetry.group.lint.dependencies]
