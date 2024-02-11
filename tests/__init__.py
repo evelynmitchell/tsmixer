@@ -1,3 +1,3 @@
-""" package - Tests """
+""" tsmixer - Tests """
 
-from package import main
+import tsmixer

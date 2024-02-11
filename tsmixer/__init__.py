@@ -1,1 +1,2 @@
-""" Tiny Time Mixers init """
+""" TSMixer package. """
+
