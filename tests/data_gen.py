@@ -96,14 +96,18 @@ def generate_data_with_trend_and_seasonality_and_noise(n, mu, sigma, seed=42):
     """ Generate time series data with trend, seasonality and noise. """
     np.random.seed(seed)
     data = norm.rvs(loc=mu, scale=sigma, size=n)
-    data = data + np.arange(n) * 0.1 + np.sin(np.arange(n) * 2 * np.pi / 365) + norm.rvs(loc=0, scale=0.1, size=n)
+    data = data + np.arange(n) * 0.1 + \
+        np.sin(np.arange(n) * 2 * np.pi / 365) + \
+        norm.rvs(loc=0, scale=0.1, size=n)
     return pd.Series(data)
 
 def generate_data_with_trend_and_seasonality_and_noise_and_index(n, mu, sigma, seed=42):
     """ Generate time series data with trend, seasonality, noise and index. """
     np.random.seed(seed)
     data = norm.rvs(loc=mu, scale=sigma, size=n)
-    data = data + np.arange(n) * 0.1 + np.sin(np.arange(n) * 2 * np.pi / 365) + norm.rvs(loc=0, scale=0.1, size=n)
+    data = data + np.arange(n) * 0.1 + \
+        np.sin(np.arange(n) * 2 * np.pi / 365) + \
+        norm.rvs(loc=0, scale=0.1, size=n)
     index = pd.date_range(start='2020-01-01', periods=n, freq='D')
     return pd.Series(data, index=index)
 
