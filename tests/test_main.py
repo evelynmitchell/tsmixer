@@ -9,7 +9,6 @@ class TestCodeUnderTest:
         """ The program should parse arguments correctly and run the server if the --server flag is set."""
         # Arrange
         import sys
-        import argparse
         from unittest.mock import patch
         from tsmixer import server
 
