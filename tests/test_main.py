@@ -7,7 +7,8 @@ from tsmixer import tsmixer
 class TestCodeUnderTest:
 
     def test_parse_arguments_and_run_server(self):
-        """ The program should parse arguments correctly and run the server if the --server flag is set."""
+        """ The program should parse arguments correctly and run the 
+            server if the --server flag is set."""
         # Arrange
         import sys
         from unittest.mock import patch
@@ -22,9 +23,10 @@ class TestCodeUnderTest:
         # Assert
         mock_run.assert_called_once_with(port=None)
 
-    # 
+
     def test_load_configuration_file(self):
-        """ The program should load the configuration file if the --config flag is set."""
+        """ The program should load the configuration file if the --config i
+            flag is set."""
         # Arrange
         import sys
         from unittest.mock import patch
@@ -39,9 +41,10 @@ class TestCodeUnderTest:
         # Assert
         mock_load.assert_called_once_with('config.json')
 
-    # 
+
     def test_load_data_and_model_files_and_make_forecast(self):
-        """ The program should load the data and model files and make a forecast if the --data and --model flags are set."""
+        """ The program should load the data and model files and make a i
+            forecast if the --data and --model flags are set."""
         # Arrange
         import sys
         from unittest.mock import patch
@@ -60,9 +63,9 @@ class TestCodeUnderTest:
         mock_load_model.assert_called_once_with('model.pkl')
         mock_save_forecast.assert_called_once()
 
-    # T
+
     def test_handle_missing_arguments_gracefully(self):
-        """he program should handle missing arguments gracefully."""
+        """ The program should handle missing arguments gracefully."""
         # Arrange
         import sys
 
@@ -72,7 +75,7 @@ class TestCodeUnderTest:
         with pytest.raises(SystemExit):
             tsmixer.main()
 
-    # 
+
     def test_handle_invalid_arguments_gracefully(self):
         """The program should handle invalid arguments gracefully."""
         # Arrange
@@ -84,7 +87,7 @@ class TestCodeUnderTest:
         with pytest.raises(SystemExit):
             tsmixer.main()
 
-    # 
+
     def test_handle_missing_configuration_file_gracefully(self):
         """The program should handle missing configuration file gracefully."""
         # Arrange
