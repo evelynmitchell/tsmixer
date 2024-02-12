@@ -1,19 +1,13 @@
 """ The main file for the TSMixer application. """
 
-import sys
-import os
 import logging
 import argparse
-import json
-import time
 
 from tsmixer import __version__
 
 from tsmixer import config
 
-from tsmixer import mixer
 from tsmixer import server
-from tsmixer import client
 
 from tsmixer import utils
 
