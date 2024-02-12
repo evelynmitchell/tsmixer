@@ -27,7 +27,6 @@ class TestCodeUnderTest:
         """ The program should load the configuration file if the --config flag is set."""
         # Arrange
         import sys
-        import argparse
         from unittest.mock import patch
         from tsmixer import config
 
@@ -67,7 +66,6 @@ class TestCodeUnderTest:
         """he program should handle missing arguments gracefully."""
         # Arrange
         import sys
-        import argparse
 
         sys.argv = ['main.py']
 
@@ -80,7 +78,6 @@ class TestCodeUnderTest:
         """The program should handle invalid arguments gracefully."""
         # Arrange
         import sys
-        import argparse
 
         sys.argv = ['main.py', '--invalid']
 
@@ -93,7 +90,6 @@ class TestCodeUnderTest:
         """The program should handle missing configuration file gracefully."""
         # Arrange
         import sys
-        import argparse
 
         sys.argv = ['main.py', '--config']
 

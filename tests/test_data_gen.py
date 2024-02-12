@@ -4,6 +4,7 @@
 
 import pytest
 import data_gen
+import numpy as np
 
 class TestDataGeneration:
 
