@@ -4,7 +4,6 @@
 import pytest
 import sys
 from unittest.mock import patch
-from tsmixer import server
 from tsmixer import config
 from tsmixer import utils
 
