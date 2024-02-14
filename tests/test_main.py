@@ -5,8 +5,6 @@ import pytest
 import sys
 from unittest.mock import patch
 
-from tsmixer import utils
-
 from tsmixer import tsmixer
 
 class TestTSMixerMain:
