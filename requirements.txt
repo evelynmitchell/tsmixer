@@ -6,3 +6,4 @@ pylint
 black
 torchfix
 deptry
+datasets
