@@ -7,3 +7,4 @@ black
 torchfix
 deptry
 datasets
+gluonts
