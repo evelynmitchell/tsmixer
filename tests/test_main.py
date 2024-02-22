@@ -4,6 +4,7 @@
 import pytest
 import sys
 from unittest.mock import patch
+from safetensors import safe_open
 
 from tsmixer import tsmixer
 
@@ -29,8 +30,12 @@ class TestTSMixerMain:
             forecast if the --data and --model flags are set."""
 
 
-        sys.argv = ['main.py', '--data', 'data.csv', '--model', 'model.pkl']
-
+        sys.argv = ['main.py', '--data', 'data.csv', '--model', 'model.safetensors']
+        # tensors = {}
+        # with safe_open("model.safetensors", framework="pt", device=0) as f:
+        #     for k in f.keys():
+        #         tensors[k] = f.get_tensor(k)
+        
         # Act
         with patch.object(utils, 'load_data') as mock_load_data, \
              patch.object(utils, 'load_model') as mock_load_model, \
