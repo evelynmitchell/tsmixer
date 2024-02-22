@@ -27,7 +27,6 @@ pandas = "^1.3.3"
 numpy = "^1.21.2"
 torch = "^1.9.1"
 datasets = "^1.12.1"
-gluonts = "^0.8.0"
 scipy = "^1.7.1"
 
 

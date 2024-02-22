@@ -7,6 +7,5 @@ black
 torchfix
 deptry
 datasets
-gluonts
 scipy
 autopep8
