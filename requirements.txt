@@ -8,3 +8,4 @@ torchfix
 deptry
 datasets
 gluonts
+scipy
