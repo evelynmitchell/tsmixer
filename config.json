@@ -1,0 +1,5 @@
+{
+    "data_file_location": "/home/efm/git/myrepos/tsmixer/data.csv",
+    "logging_level": "INFO",
+    "num_mixer_layers": 3
+}

@@ -54,3 +54,4 @@ class TestDataLoading:
         from datasets import load_dataset
         with pytest.raises(FileNotFoundError):
             dataset = load_dataset('Salesforce/cloudops_tsf', 'missing_dataset')
+            assert dataset is not None
