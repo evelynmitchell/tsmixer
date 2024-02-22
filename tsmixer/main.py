@@ -35,20 +35,6 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "-s",
-    "--server",
-    action="store_true",
-    help="Run the TSMixer server."
-)
-
-parser.add_argument(
-    "-p",
-    "--port",
-    type=int,
-    help="The port to run the server on."
-)
-
-parser.add_argument(
     "-d",
     "--data",
     type=str,
@@ -79,10 +65,6 @@ def main():
     # Load the configuration
     if args.config:
         config.load(args.config)
-
-    # Run the server
-    if args.server:
-        server.run(port=args.port)
 
     # Run the client
     else:

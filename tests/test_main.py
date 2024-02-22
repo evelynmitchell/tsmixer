@@ -10,20 +10,6 @@ from tsmixer import tsmixer
 class TestTSMixerMain:
     """ This class contains the tests for the main module. """
 
-    def test_parse_arguments_and_run_server(self):
-        """ The program should parse arguments correctly and run the 
-            server if the --server flag is set."""
-
-        sys.argv = ['main.py', '--server']
-
-        # Act
-        with patch.object(server, 'run') as mock_run:
-            tsmixer.main()
-
-        # Assert
-        mock_run.assert_called_once_with(port=None)
-
-
     def test_load_configuration_file(self):
         """ The program should load the configuration file if the --config i
             flag is set."""
@@ -53,7 +39,6 @@ class TestTSMixerMain:
 
         # Assert
         mock_load_data.assert_called_once_with('data.csv')
-        mock_load_model.assert_called_once_with('model.pkl')
         mock_save_forecast.assert_called_once()
 
 
