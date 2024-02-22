@@ -24,10 +24,10 @@ jobs:
       run: pip install --no-cache-dir -r requirements.txt
 
     - name: Run Python unit tests
-      run: python3 -m unittest tests/
+      run: pytest
 
     - name: Verify that the Docker image for the action builds
       run: docker build . --file Dockerfile
 
     - name: Verify integration test results
-      run: python3 -m unittest tests/
+      run: pytest
