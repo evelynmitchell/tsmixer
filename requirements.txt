@@ -10,3 +10,4 @@ datasets
 scipy
 autopep8
 safetensors
+gluonts
