@@ -45,7 +45,7 @@ autopep8 = "*"
 
 
 [tool.poetry.group.lint.dependencies]
-ruff = "^0.1.6"
+ruff = "^0.2.2"
 types-toml = "^0.10.8.1"
 types-redis = "^4.3.21.6"
 types-pytz = "^2024.1.0.20240203"
