@@ -30,8 +30,6 @@ datasets = "^1.12.1"
 scipy = "^1.7.1"
 safetensors = "^0.4.2"
 gluonts = "^0.8.0"
-numpy = "^1.21.2"
-
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.2.2"
