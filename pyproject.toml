@@ -33,7 +33,7 @@ gluonts = "^0.8.0"
 
 
 [tool.poetry.dev-dependencies]
-ruff = "^0.1.6"
+ruff = "^0.2.2"
 flake8 = "*"
 pytest = "*"
 pylint = "*"
