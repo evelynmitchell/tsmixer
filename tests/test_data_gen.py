@@ -8,7 +8,6 @@ import numpy as np
 
 class TestDataGeneration:
 
-    # 
     def test_generate_data(self):
         """ The code generates random time series data with specified mean 
             and standard deviation."""
