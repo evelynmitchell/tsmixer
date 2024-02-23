@@ -4,20 +4,18 @@
 
 import pytest
 import gluonts # needed by the saleforce dataset
+from datasets import load_dataset
 
 class TestDataLoading:
     """ Tests for data loading """
-    
+
     def test_load_dataset_successfully(self):
         """ Load dataset successfully """
-        from datasets import load_dataset
         dataset = load_dataset('Salesforce/cloudops_tsf', 'azure_vm_traces_2017')
         assert dataset is not None
 
-    
     def test_dataset_contains_expected_features(self):
         """ Dataset contains expected features """
-        from datasets import load_dataset
         dataset = load_dataset('Salesforce/cloudops_tsf', 'azure_vm_traces_2017')
         assert 'start' in dataset['train_test'].features
         assert 'target' in dataset['train_test'].features
@@ -29,30 +27,23 @@ class TestDataLoading:
     
     def test_dataset_has_expected_number_of_rows(self):
         """ Dataset has expected number of rows """
-        from datasets import load_dataset
         dataset = load_dataset('Salesforce/cloudops_tsf', 'azure_vm_traces_2017')
         assert len(dataset['train_test']) == 17568
 
-    
     def test_dataset_is_empty(self):
         """ Dataset is empty """
-        from datasets import load_dataset
         dataset = load_dataset('Salesforce/cloudops_tsf', 'azure_vm_traces_2017')
         assert len(dataset['train_test']) == 0
 
-    
     def test_dataset_is_corrupted(self):
         """ Dataset is corrupted """
-        from datasets import load_dataset
         dataset = load_dataset('Salesforce/cloudops_tsf', 'azure_vm_traces_2017')
         # Simulate a corrupted dataset by modifying a feature
         dataset['train_test']['start'][0] = None
         assert dataset['train_test']['start'][0] is None
 
-    
     def test_dataset_file_is_missing(self):
         """ Dataset file is missing """
-        from datasets import load_dataset
         with pytest.raises(FileNotFoundError):
             dataset = load_dataset('Salesforce/cloudops_tsf', 'missing_dataset')
             assert dataset is not None
