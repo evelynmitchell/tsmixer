@@ -12,3 +12,4 @@ autopep8
 safetensors
 gluonts
 numpy
+pytest-cov
