@@ -41,6 +41,7 @@ torchfix = "*"
 numpy = "*"
 deptry = "*"
 autopep8 = "*"
+mkdocs-glightbox = "*"
 
 
 [tool.poetry.group.lint.dependencies]
