@@ -28,7 +28,7 @@ class TestTSMixer:
         # Check if output tensor has the same shape as input tensor
         assert output_tensor.shape == input_tensor.shape
 
-    # 
+
     def test_forward_method_of_TemporalProjection_with_valid_input(self):
         """ The forward method of the TemporalProjection class can be tested by passing in a tensor of shape (batch_size, num_features, num_time_steps, channels) and checking if the output tensor has the same shape."""
         # Create input tensor
