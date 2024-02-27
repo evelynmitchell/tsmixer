@@ -7,9 +7,11 @@ from tsmixer.tsmixer import MixerLayer, TemporalProjection, TSMixer, MLP
 
 class TestTSMixer:
 
-    # 
     def test_forward_method_of_MixerLayer_with_valid_input(self):
-        """ The forward method of the MixerLayer class can be tested by passing in a tensor of shape (batch_size, num_features, num_time_steps, channels) and checking if the output tensor has the same shape."""
+        """ The forward method of the MixerLayer class can be tested 
+        by passing in a tensor of shape (batch_size, num_features, 
+        num_time_steps, channels) and checking if the output tensor 
+        has the same shape."""
         # Create input tensor
         batch_size = 2
         num_features = 3
