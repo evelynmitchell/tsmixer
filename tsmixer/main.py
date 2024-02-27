@@ -3,7 +3,7 @@
 import logging
 import argparse
 
-import data_load
+# import data_load
 
 from tsmixer import __version__
 

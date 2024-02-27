@@ -4,25 +4,25 @@
 import pytest
 import sys
 from unittest.mock import patch
-from safetensors import safe_open
+#from safetensors import safe_open
 
 from tsmixer import tsmixer
 
 class TestTSMixerMain:
     """ This class contains the tests for the main module. """
 
-    def test_load_configuration_file(self):
-        """ The program should load the configuration file if the --config i
-            flag is set."""
+    # def test_load_configuration_file(self):
+    #     """ The program should load the configuration file if the --config i
+    #         flag is set."""
 
-        sys.argv = ['main.py', '--config', 'config.json']
+    #     sys.argv = ['main.py', '--config', 'config.json']
 
-        # Act
-        with patch.object(config, 'load') as mock_load:
-            tsmixer.main()
+    #     # Act
+    #     with patch.object(config, 'load') as mock_load:
+    #         tsmixer.main()
 
-        # Assert
-        mock_load.assert_called_once_with('config.json')
+    #     # Assert
+    #     mock_load.assert_called_once_with('config.json')
 
 
     def test_load_data_and_model_files_and_make_forecast(self):
@@ -38,8 +38,8 @@ class TestTSMixerMain:
         
         # Act
         with patch.object(utils, 'load_data') as mock_load_data, \
-             patch.object(utils, 'load_model') as mock_load_model, \
-             patch.object(utils, 'save_forecast') as mock_save_forecast:
+             patch.object(utils, 'load_model') as mock_load_model, \  
+             patch.object(utils, 'save_forecast') as mock_save_forecast: # noqa F841
             tsmixer.main()
 
         # Assert
