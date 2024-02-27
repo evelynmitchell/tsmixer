@@ -40,7 +40,7 @@ class TestTSMixerMain:
         
         # Act
         with patch.object(utils, 'load_data') as mock_load_data, \
-             patch.object(utils, 'load_model') as mock_load_model, \  
+             patch.object(utils, 'load_model') as mock_load_model, \
              patch.object(utils, 'save_forecast') as mock_save_forecast: 
             tsmixer.main()
 
