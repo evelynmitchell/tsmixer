@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "paper"
-version = "0.0.1"
+version = "0.0.2"
 description = "TSMixer - Pytorch"
 license = "MIT"
 authors = ["Evelyn Mitchell <efmphone@gmail.com"]
