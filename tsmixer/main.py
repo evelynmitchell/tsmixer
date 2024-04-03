@@ -5,11 +5,8 @@ import argparse
 
 # import data_load
 
-from tsmixer import __version__
-
 from tsmixer import config
 
-from tsmixer import server
 
 from tsmixer import utils
 
@@ -18,46 +15,31 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Set up the argument parser
-parser = argparse.ArgumentParser(description="TSMixer - A multivariate time series forecasting tool.")
-
-parser.add_argument(
-    "-v",
-    "--version",
-    action="version",
-    version="%(prog)s " + __version__
+parser = argparse.ArgumentParser(
+    description=(
+        "TSMixer - A multivariate time series forecasting tool."
+    )
 )
 
 parser.add_argument(
-    "-c",
-    "--config",
-    type=str,
-    help="Path to the configuration file."
+    "-c", "--config", type=str, help="Path to the configuration file."
 )
 
 parser.add_argument(
-    "-d",
-    "--data",
-    type=str,
-    help="Path to the data file."
+    "-d", "--data", type=str, help="Path to the data file."
 )
 
 parser.add_argument(
-    "-m",
-    "--model",
-    type=str,
-    help="Path to the model file."
+    "-m", "--model", type=str, help="Path to the model file."
 )
 
 parser.add_argument(
-    "-o",
-    "--output",
-    type=str,
-    help="Path to the output file."
+    "-o", "--output", type=str, help="Path to the output file."
 )
 
 
 def main():
-    """ The main function for the TSMixer application. """
+    """The main function for the TSMixer application."""
 
     # Parse the arguments
     args = parser.parse_args()
@@ -79,4 +61,3 @@ def main():
 
         # Save the forecast
         utils.save_forecast(forecast, args.output)
-
