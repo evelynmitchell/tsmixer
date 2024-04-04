@@ -1,5 +1,8 @@
 # To create a smoke test dataset for the model
 
+# This uses a hard-coded path to the data file
+# TODO: Refactor the code to use the data_load module
+
 # Path: scripts/data_split.py
 
 # Read  the first 1000 rows from data/SPX.csv
