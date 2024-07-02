@@ -2535,13 +2535,13 @@ opt-einsum = ["opt-einsum (>=3.3)"]
 
 [[package]]
 name = "torchfix"
-version = "0.4.0"
+version = "0.5.0"
 description = "TorchFix - a linter for PyTorch-using code with autofix support"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "TorchFix-0.4.0-py3-none-any.whl", hash = "sha256:71e9627b2b8a011e336886020e915d4d14c9d5d536c8f4182bbfeef32759ec8c"},
-    {file = "TorchFix-0.4.0.tar.gz", hash = "sha256:8dc2638876da0f9c09d4783fec180c01bd8cb14ac353c9d3d8208184eab76950"},
+    {file = "TorchFix-0.5.0-py3-none-any.whl", hash = "sha256:8bc2e91e6d2fa3b038190294b65dab1f3287f7cca8323ced94bc96c1ed57c9ca"},
+    {file = "torchfix-0.5.0.tar.gz", hash = "sha256:ceeee3a22dffa84e0988d827265f66ba5b0e7c1523429180e2602b61c02f87cc"},
 ]
 
 [package.dependencies]
