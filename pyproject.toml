@@ -28,7 +28,7 @@ numpy = "^1.21.2"
 torch = "^2.1.2"
 datasets = "^2.20.0"
 scipy = "^1.13.1"
-safetensors = "^0.4.2"
+safetensors = "^0.4.3"
 gluonts = "^0.8.0"
 
 [tool.poetry.dev-dependencies]
