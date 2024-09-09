@@ -181,6 +181,3 @@ class DataUrl:
 # data_url = DataUrl(url, identifier, config)
 # data = data_url.get_data()
 # print(data)
-
-    
-
