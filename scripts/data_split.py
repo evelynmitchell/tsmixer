@@ -29,6 +29,7 @@ def split_data(data):
 
 
 def save_to_csv(df, filename):
+    """Save the data to a CSV file."""
     df.to_csv(filename, index=False)
 
 
