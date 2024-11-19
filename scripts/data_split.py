@@ -1,7 +1,7 @@
 """
 Module for creating a smoke test dataset for the TSMixer model.
 
-This module reads data from SPX.csv, splits it into train, test, 
+This module reads data from SPX.csv, splits it into train, test,
 and validation sets, and saves each set to separate CSV files.
 
 Usage:
