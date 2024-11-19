@@ -44,6 +44,8 @@ datasets = "^3.0.0"
 scipy = "^1.13.1"
 safetensors = "^0.4.3"
 gluonts = "^0.16.0"
+astroid = "*"
+platformdirs = "*"
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.7.0"
