@@ -15,7 +15,7 @@ The data is split in reverse chronological order.
 
 # Path: scripts/data_split.py
 
-from data_load import load_data
+from tsmixer.data_load import load_data
 
 
 def split_data(data):
