@@ -1,12 +1,19 @@
-# To create a smoke test dataset for the model
+"""
+Module for creating a smoke test dataset for the TSMixer model.
+
+This module reads data from SPX.csv, splits it into train, test, 
+and validation sets, and saves each set to separate CSV files.
+
+Usage:
+    - Reads the last 1000 rows from data/SPX.csv
+    - Saves the first 800 rows as training data
+    - Saves the next 100 rows as test data
+    - Saves the final 100 rows as validation data
+
+The data is split in reverse chronological order.
+"""
 
 # Path: scripts/data_split.py
-
-# The data is in reverse chronological order
-# Read  the last 1000 rows from data/SPX.csv
-# Save the prior 800 rows to data/train.csv
-# Save the prior 100 rows to data/test.csv
-# Save the prior 100 rows to data/validation.csv
 
 from data_load import load_data
 
