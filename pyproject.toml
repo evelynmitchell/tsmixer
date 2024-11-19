@@ -21,6 +21,20 @@ classifiers = [
     "Programming Language :: Python :: 3.10"
 ]
 
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", marker = "platform_system != 'Darwin'" },
+]
+torchvision = [
+    { index = "pytorch-cpu", marker = "platform_system != 'Darwin'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
 [tool.poetry.dependencies]
 python = "^3.10"
 pandas = "^2.2.2"
