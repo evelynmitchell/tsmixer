@@ -13,3 +13,6 @@ safetensors
 gluonts
 numpy
 pytest-cov
+pylint
+datasets
+
