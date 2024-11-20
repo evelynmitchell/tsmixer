@@ -34,10 +34,10 @@ def save_to_csv(df, filename):
 
 
 # Load the data using the data_load module
-data = load_data()
+d = load_data()
 
 # Split the data
-train, test, validation = split_data(data)
+train, test, validation = split_data(d)
 
 # Save the split data
 save_to_csv(train, "tests/data/train.csv")
