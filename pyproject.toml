@@ -48,7 +48,7 @@ astroid = "*"
 platformdirs = "*"
 
 [tool.poetry.dev-dependencies]
-ruff = "^0.7.0"
+ruff = "^0.8.0"
 flake8 = "*"
 pytest = "*"
 pylint = "*"
@@ -61,7 +61,7 @@ mkdocs-glightbox = "*"
 
 
 [tool.poetry.group.lint.dependencies]
-ruff = "^0.7.0"
+ruff = "^0.8.0"
 types-toml = "^0.10.8.1"
 types-redis = "^4.3.21.6"
 types-pytz = "^2024.1.0.20240417"
