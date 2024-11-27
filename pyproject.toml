@@ -1,5 +1,6 @@
 [build-system]
 requires = ["poetry-core>=1.0.0"]
+requires-python = ">=3.12.0"
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
@@ -22,30 +23,29 @@ classifiers = [
 ]
 
 
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.2"
+numpy = "^2.1.3"
+datasets = "^3.0.0"
+scipy = "^1.13.1"
+
+
 [tool.uv.sources]
 torch = [
-    { index = "pytorch-cpu", marker = "platform_system != 'Darwin'" },
+  { index = "pytorch-cpu", marker = "platform_system == 'Windows'" },
+  { index = "pytorch-cu124", marker = "platform_system == 'Linux'" },
 ]
 torchvision = [
-    { index = "pytorch-cpu", marker = "platform_system != 'Darwin'" },
+  { index = "pytorch-cpu", marker = "platform_system == 'Windows'" },
+  { index = "pytorch-cu124", marker = "platform_system == 'Linux'" },
 ]
+
 
 [[tool.uv.index]]
 name = "pytorch-cpu"
 url = "https://download.pytorch.org/whl/cpu"
 explicit = true
-
-[tool.poetry.dependencies]
-python = "^3.10"
-pandas = "^2.2.2"
-numpy = "^2.1.3"
-torch = "^2.3.1"
-datasets = "^3.0.0"
-scipy = "^1.13.1"
-safetensors = "^0.4.3"
-gluonts = "^0.16.0"
-astroid = "*"
-platformdirs = "*"
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.8.0"
@@ -59,6 +59,18 @@ deptry = "*"
 autopep8 = "*"
 mkdocs-glightbox = "*"
 
+
+
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
 
 [tool.poetry.group.lint.dependencies]
 ruff = "^0.8.0"
